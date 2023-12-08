@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Navbar.css";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 function Navbar() {
   return (
@@ -11,7 +12,7 @@ function Navbar() {
         <div className="connect-wallet-div">
           <button>Explore</button>
           <button>Feedpage</button>
-          <button>Connect Wallet</button>
+          <ConnectButton />
         </div>
       </div>
     </div>

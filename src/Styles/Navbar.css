@@ -1,0 +1,56 @@
+.Navbar-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  box-shadow: rgb(149 157 165 / 37%) 0px 8px 24px;
+}
+
+.image-profile img {
+  border-radius: 100px;
+  width: 200px;
+}
+
+.profile-div {
+  padding: 15px;
+  border: 1px solid #00000000;
+  display: flex;
+  margin: 10px 5px;
+}
+
+.description-profile {
+  margin-top: -15px;
+}
+
+.right-side-profile {
+  padding: 30px;
+  text-align: justify;
+}
+
+.follow-message-button button {
+  border: none;
+  font-size: 14px;
+  background-color: #7c43ff;
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+}
+.follow-message-button {
+  display: flex;
+  margin: 15px 0px;
+  gap: 100px;
+}
+
+.logo-div {
+  padding: 0px 30px;
+}
+
+.connect-wallet-div {
+  padding: 0px 30px;
+}
+
+.connect-wallet-div button {
+  margin: 0px 30px;
+}

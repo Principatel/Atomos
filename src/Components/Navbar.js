@@ -10,6 +10,7 @@ function Navbar() {
           <h2>Proflex</h2>
         </div>
         <div className="connect-wallet-div">
+          <button>My Profile</button>
           <button>Explore</button>
           <button>Feedpage</button>
           <ConnectButton />

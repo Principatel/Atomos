@@ -11,6 +11,7 @@ import Dao from "./Components/profilepages/Dao";
 import Ecommerce from "./Components/Ecommerce";
 import Explore from "./Components/Explore";
 import Myprofile from "./Components/Myprofile";
+import { AirstackProvider } from "@airstack/airstack-react";
 
 const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, base, zora],
@@ -36,6 +37,7 @@ function App() {
         <WagmiConfig config={wagmiConfig}>
           <RainbowKitProvider chains={chains}>
             <Navbar />
+            <AirstackProvider  apiKey={"1bd6b585dc4c049148638d1a196d1dc44"}>
             {/* <Ecommerce /> */}
             {/* <Explore /> */}
             {/* <Myprofile /> */}
@@ -45,6 +47,7 @@ function App() {
               <Route path="/explore" element={<Explore />} />
               {/* <Route path="/dao" element={<Dao />} /> */}
             </Routes>
+            </AirstackProvider>
           </RainbowKitProvider>
         </WagmiConfig>
       </Router>

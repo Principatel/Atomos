@@ -85,7 +85,7 @@ function Defi() {
     <div>
       <div className="dao-div">
         <div onClick={toggledefi} style={{ cursor: "pointer" }}>
-          <p className="defi-heading">
+          <p id="font-size" className="defi-heading">
             Defi Activity <img id="arrorr" src={arrow} alt="none" />{" "}
             {defivisible ? "" : ""}
           </p>
@@ -125,13 +125,13 @@ function Defi() {
             </div>
           </div>
         )}
-        <div onClick={toggledefi} style={{ cursor: "pointer" }}>
+        <div id="font-size" onClick={toggleart} style={{ cursor: "pointer" }}>
           <p className="defi-heading" id="color-orange">
             Art Collection <img id="arrorr" src={arrow} alt="none" />{" "}
-            {defivisible ? "" : ""}
+            {artdisplay ? "" : ""}
           </p>
         </div>
-        {defivisible && <div>Art collection here</div>}
+        {artdisplay && <div>Art collection here</div>}
       </div>
     </div>
   );

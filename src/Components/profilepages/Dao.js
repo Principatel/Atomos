@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../Styles/Dao.css";
 import i1 from "../../Assets/poaps/p1.jpg";
 import i2 from "../../Assets/poaps/p2.jpg";
+import arrow from "../../Assets/Group 1.png";
 // import i3 from "../../Assets/poaps/p3.jpg";
 import i4 from "../../Assets/poaps/p4.png";
 
@@ -76,13 +77,18 @@ const DaosCard = ({
 }) => {
   return (
     <div className="daos-card-here">
-      <h2>{title}</h2>
+      <div className="daos-card-here-head">
+        <h2>{title}</h2>
+      </div>
       <div>
         <p>Voting Power: {votingPower}</p>
         <p>Voting Percentage: {votingPercentage}%</p>
         <p>Received Delegation: {receivedDelegation}</p>
         <p>Proposals Created: {proposalsCreated}</p>
         <p>Proposals Voted: {proposalsVoted}</p>
+        <div className="know-more-button">
+          <button>Know More</button>
+        </div>
       </div>
     </div>
   );
@@ -104,7 +110,10 @@ function Daos() {
     <div>
       <div className="dao-div">
         <div onClick={toggleDao} style={{ cursor: "pointer" }}>
-          <h2>DAOs Participation & Power {isDaoVisible ? "" : ""}</h2>
+          <p className="dao-div-p">
+            DAOs Participation & Power <img src={arrow} alt="none" />{" "}
+            {isDaoVisible ? "" : ""}
+          </p>
         </div>
         {isDaoVisible && (
           <div>
@@ -114,14 +123,18 @@ function Daos() {
           </div>
         )}
       </div>
-      <div className="dao-div">
+      <div className="dao-div-nft">
         <div onClick={togglepoap} style={{ cursor: "pointer" }}>
-          <h2>Proof of Participation {ispoapvisible ? "" : ""}</h2>{" "}
+          <h2>
+            Proof of Participation <img src={arrow} alt="none" />{" "}
+            {ispoapvisible ? "" : ""}
+          </h2>{" "}
         </div>
         {ispoapvisible && (
           <div>
             <div className="poaps">
-              <h2>Poaps</h2>
+              <h5>Poaps</h5>
+
               <div className="poaps-and-nft">
                 {[i1, i2, i4].map((image, index) => (
                   <img key={index} src={image} alt={`poap-${index}`} />
@@ -129,10 +142,15 @@ function Daos() {
               </div>
             </div>
             <div className="poaps">
-              <h2>NFTs</h2>
-              <div className="poaps-and-nft">
+              <h5>NFTs</h5>
+              <div className="and-nft">
                 {[i1, i2, i4].map((image, index) => (
-                  <img key={index} src={image} alt={`poap-${index}`} />
+                  <img
+                    className="nft-images"
+                    key={index}
+                    src={image}
+                    alt={`poap-${index}`}
+                  />
                 ))}
               </div>
             </div>

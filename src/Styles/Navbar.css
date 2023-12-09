@@ -5,11 +5,11 @@
   align-items: center;
   margin-top: 5px;
   margin-bottom: 20px;
-  box-shadow: rgb(149 157 165 / 37%) 0px 8px 24px;
+  /* box-shadow: rgb(149 157 165 / 37%) 0px 8px 24px; */
 }
 
 .image-profile img {
-  border-radius: 100px;
+  border-radius: 30px;
   width: 200px;
 }
 
@@ -29,13 +29,24 @@
   text-align: justify;
 }
 
-.follow-message-button button {
-  border: none;
-  font-size: 14px;
-  background-color: #7c43ff;
+.follow-message-button button:hover {
+  background-color: transparent;
   color: white;
-  padding: 7px;
-  border-radius: 5px;
+  border: 1px solid white;
+}
+.follow-message-button button {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  border-radius: 40px;
+  background: #fd7725;
+  border: none;
+  font-size: 18px;
+  color: black;
+  padding: 8px 18px;
 }
 .follow-message-button {
   display: flex;
@@ -43,15 +54,30 @@
   gap: 100px;
 }
 
+.logo-div img {
+  width: 220px;
+}
+
 .logo-div {
   padding: 0px 30px;
 }
 
 .connect-wallet-div {
+  align-items: center;
   display: flex;
   padding: 0px 30px;
 }
 
+.connect-wallet-div button:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
 .connect-wallet-div button {
   margin: 0px 30px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
 }

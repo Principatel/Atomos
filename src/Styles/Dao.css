@@ -1,6 +1,23 @@
+.dao-div-nft {
+  color: #9a9fff;
+
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.dao-div-p {
+  color: #fd7725;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .dao-div {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  margin: 30px 0px;
+  /* margin: 20px 0px; */
   padding: 15px;
   border: 1px solid #00000000;
 }
@@ -18,12 +35,45 @@
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
+.daos-card-here-head {
+  width: 350px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+  margin-top: -19px;
+  background-color: #fd7725;
+}
+.daos-card-here:hover {
+  box-shadow: rgba(232, 226, 226, 0.35) 0px 5px 15px;
+}
+.daos-card-here button {
+  display: flex;
+  border: none;
+  margin: 5px;
+  border-radius: 40px;
+  background: #323ff9;
+  color: #fff;
+}
+
+.know-more-button {
+  display: flex;
+  justify-content: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.daos-card-here p {
+  margin: 3px 7px;
+}
 .daos-card-here {
+  border: 1px solid white;
   text-align: justify;
   border-radius: 10px;
   margin: 8px;
-  padding: 15px;
-  box-shadow: rgb(0 0 0 / 57%) 0px 1px 4px;
+  /* padding: 15px; */
+  box-shadow: rgb(240 225 225) 0px 1px 4px;
 }
 
 .dao-card-container {
@@ -55,9 +105,17 @@
   background-color: #f1f1f128; /* Adjust the color of the scrollbar track */
 }
 
+.poaps h5 {
+  color: white;
+  text-align: center;
+}
 .poaps-and-nft {
   display: flex;
   overflow-x: auto;
+}
+
+.nft-images {
+  border-radius: 10px;
 }
 
 .poaps-and-nft img:hover {
@@ -65,32 +123,60 @@
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   scale: 1.04;
 }
+.and-nft img:hover {
+  scale: 1.04;
+}
+.and-nft img {
+  cursor: pointer;
+  width: 150px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  margin: 4px 8px;
+  border-radius: 10px;
+  height: auto;
+}
 .poaps-and-nft img {
   cursor: pointer;
-
+  max-width: 132px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   margin: 4px 8px;
   border-radius: 250px;
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 
+.domain-card:hover {
+  box-shadow: rgba(232, 232, 238, 0.25) 0px 13px 27px -5px,
+    rgba(231, 216, 216, 0.3) 0px 8px 16px -8px;
+}
 .domain-card {
+  font-weight: 800;
+  display: flex;
+  background-color: #fff;
+  width: 263px;
+  height: 122px;
+  flex-shrink: 0;
+  color: rgb(11, 116, 213);
+  stroke-width: 1px;
+  stroke: #2f2f2f;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.146);
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 18px;
+  margin: 5px;
   font-size: 27px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(229, 223, 223, 0.54) 0px 4px 6px -1px,
+    rgba(212, 206, 206, 0.585) 0px 2px 4px -1px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-
-.domain-card:hover {
+/* .domain-card:hover {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-}
+} */
 .domain-card-here {
   margin: 12px;
   display: flex;
@@ -122,6 +208,9 @@
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .publish-mirror-card {
+  height: 200px;
+  width: 300px;
+  background-color: blueviolet;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   margin: 5px 10px;
@@ -171,4 +260,37 @@
 
 .warpcast-card-here {
   display: flex;
+}
+
+.mirror-head {
+  color: #9a9fff;
+  font-family: Poppins;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mirror-publish {
+  margin-top: -50px;
+}
+
+.mirror-publish-head {
+  padding: 16px;
+  width: fit-content;
+  border-radius: 14px;
+  background: rgb(255 255 255 / 30%);
+}
+
+.button-mirror-publish button {
+  padding: 8px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.54);
+}
+.button-mirror-publish {
+  display: flex;
+  justify-content: center;
 }

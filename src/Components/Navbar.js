@@ -14,7 +14,7 @@ function Navbar() {
         </div>
         <div className="connect-wallet-div">
           <Link to="/myprofile">
-            <button>My Profile</button>
+            <button>Profile</button>
           </Link>
           <Link to="/e-commmerce">
             <button>E-commerce</button>

@@ -88,7 +88,7 @@ function Domain() {
           onClick={togglemirror}
           style={{ cursor: "pointer" }}
         >
-          <p>
+          <p id="font-size">
             Mirror <img id="arrorr" src={arrow} alt="none" />{" "}
             {ismirrorvisible ? "" : ""}
           </p>

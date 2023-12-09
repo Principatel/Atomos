@@ -126,7 +126,7 @@ function Daos() {
       <div className="dao-div-nft">
         <div onClick={togglepoap} style={{ cursor: "pointer" }}>
           <p>
-            Proof of Participation <img src={arrow} alt="none" />{" "}
+            Proof of Participation <img id="arrorr" src={arrow} alt="none" />{" "}
             {ispoapvisible ? "" : ""}
           </p>{" "}
         </div>
@@ -136,7 +136,7 @@ function Daos() {
               <h5>Poaps</h5>
 
               <div className="poaps-and-nft">
-                {[i1, i2, i4].map((image, index) => (
+                {[i2, i1, i4].map((image, index) => (
                   <img key={index} src={image} alt={`poap-${index}`} />
                 ))}
               </div>

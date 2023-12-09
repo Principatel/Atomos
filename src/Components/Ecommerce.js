@@ -22,36 +22,6 @@ function Ecommerce() {
       title: "NFT Card 1",
       price: "0.1 ETH",
     },
-    {
-      id: 2,
-      imageUrl: i1,
-      title: "NFT Card 2",
-      price: "0.2 ETH",
-    },
-    {
-      id: 1,
-      imageUrl: i1,
-      title: "NFT Card 1",
-      price: "0.1 ETH",
-    },
-    {
-      id: 2,
-      imageUrl: i1,
-      title: "NFT Card 2",
-      price: "0.2 ETH",
-    },
-    {
-      id: 1,
-      imageUrl: i1,
-      title: "NFT Card 1",
-      price: "0.1 ETH",
-    },
-    {
-      id: 2,
-      imageUrl: i1,
-      title: "NFT Card 2",
-      price: "0.2 ETH",
-    },
   ];
 
   return (

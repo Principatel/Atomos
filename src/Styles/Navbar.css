@@ -37,7 +37,7 @@
 .follow-message-button button {
   color: #000;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 10px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -73,7 +73,7 @@
 }
 .connect-wallet-div button {
   margin: 0px 30px;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   background-color: transparent;
   border: none;

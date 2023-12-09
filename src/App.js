@@ -8,9 +8,9 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import Profile from "./Components/profilepages/Profile";
 import Dao from "./Components/profilepages/Dao";
-import Explore from "./Components/Ecommerce";
 import Myprofile from "./Components/Myprofile";
 import Ecommerce from "./Components/Ecommerce";
+import Explore from "./Components/Explore";
 
 const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, base, zora],
@@ -36,7 +36,9 @@ function App() {
         <WagmiConfig config={wagmiConfig}>
           <RainbowKitProvider chains={chains}>
             <Navbar />
-            <Myprofile />
+            {/* <Ecommerce /> */}
+            <Explore />
+            {/* <Myprofile /> */}
             <Routes>
               {/* <Route path="/e-commmerce" element={<Ecommerce />} /> */}
               {/* <Route path="/profile" element={<Profile />} /> */}

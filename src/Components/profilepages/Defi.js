@@ -74,7 +74,6 @@ function Defi() {
     },
   ];
 
-  // Determine whether to add the scrollable class
   const shouldAddScrollClass = transactions.length > 10;
 
   return (

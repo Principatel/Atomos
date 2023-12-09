@@ -1,0 +1,54 @@
+/* Sample CSS for the NFT cards */
+.nft-container {
+  padding: 5px 65px;
+  max-height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nft-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+}
+
+.nft-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.nft-details {
+  padding: 10px 0;
+}
+
+.nft-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.nft-price {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.buy-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.buy-button:hover {
+  background-color: #45a049;
+}

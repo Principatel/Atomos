@@ -1,4 +1,4 @@
-import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
@@ -8,6 +8,9 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import Profile from "./Components/profilepages/Profile";
 import Dao from "./Components/profilepages/Dao";
+import Explore from "./Components/Ecommerce";
+import Myprofile from "./Components/Myprofile";
+import Ecommerce from "./Components/Ecommerce";
 
 const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, base, zora],
@@ -29,13 +32,19 @@ const wagmiConfig = createConfig({
 function App() {
   return (
     <div className="App">
-      <WagmiConfig config={wagmiConfig}>
-        <RainbowKitProvider chains={chains}>
-          <Navbar />
-          <Profile />
-          <Dao />
-        </RainbowKitProvider>
-      </WagmiConfig>
+      <Router>
+        <WagmiConfig config={wagmiConfig}>
+          <RainbowKitProvider chains={chains}>
+            <Navbar />
+            <Myprofile />
+            <Routes>
+              {/* <Route path="/e-commmerce" element={<Ecommerce />} /> */}
+              {/* <Route path="/profile" element={<Profile />} /> */}
+              {/* <Route path="/dao" element={<Dao />} /> */}
+            </Routes>
+          </RainbowKitProvider>
+        </WagmiConfig>
+      </Router>
     </div>
   );
 }

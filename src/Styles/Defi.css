@@ -1,0 +1,61 @@
+.defi-transaction-container {
+  max-height: 300px; /* Set a maximum height for the scrollable box */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  border: 1px solid #ccc; /* Optional: Add a border for styling */
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+
+.defi-transactions {
+  margin: auto; /* Center the table */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove default table borders */
+  margin-top: 10px; /* Add some top margin */
+}
+
+th,
+td {
+  border: 1px solid #ddd; /* Add minimal borders to table cells */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2; /* Light gray background for header */
+}
+
+.contracts-deployed-contianer {
+  overflow-x: scroll;
+}
+
+.contract-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contract-card:hover {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.contract-card {
+  width: 300px;
+  text-align: justify;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.292);
+  margin: 5px;
+  padding: 10px;
+}
+
+.explor-divbutton {
+  margin: 5px;
+}
+.explor-div {
+  display: flex;
+  justify-content: center;
+}

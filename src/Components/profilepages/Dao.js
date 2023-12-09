@@ -109,7 +109,6 @@ function Daos() {
         {isDaoVisible && (
           <div>
             <div className="scrollable-container">
-              {/* Integrated DaosCardContainer here */}
               <DaosCardContainer />
             </div>
           </div>
@@ -120,10 +119,23 @@ function Daos() {
           <h2>Proof of Participation {ispoapvisible ? "" : ""}</h2>{" "}
         </div>
         {ispoapvisible && (
-          <div className="poaps-and-nft">
-            {[i1, i2, i4].map((image, index) => (
-              <img key={index} src={image} alt={`poap-${index}`} />
-            ))}
+          <div>
+            <div className="poaps">
+              <h2>Poaps</h2>
+              <div className="poaps-and-nft">
+                {[i1, i2, i4].map((image, index) => (
+                  <img key={index} src={image} alt={`poap-${index}`} />
+                ))}
+              </div>
+            </div>
+            <div className="poaps">
+              <h2>NFTs</h2>
+              <div className="poaps-and-nft">
+                {[i1, i2, i4].map((image, index) => (
+                  <img key={index} src={image} alt={`poap-${index}`} />
+                ))}
+              </div>
+            </div>
           </div>
         )}
       </div>

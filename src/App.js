@@ -11,6 +11,7 @@ import Dao from "./Components/profilepages/Dao";
 import Ecommerce from "./Components/Ecommerce";
 import Explore from "./Components/Explore";
 import Myprofile from "./Components/Myprofile";
+import Feedpage from "./Components/Feedpage";
 
 const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, base, zora],
@@ -43,6 +44,7 @@ function App() {
               <Route path="/e-commmerce" element={<Ecommerce />} />
               <Route path="/myprofile" element={<Myprofile />} />
               <Route path="/explore" element={<Explore />} />
+              <Route path="/feed" element={<Feedpage />} />
               {/* <Route path="/dao" element={<Dao />} /> */}
             </Routes>
           </RainbowKitProvider>

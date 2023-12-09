@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "../../Styles/Defi.css";
+import g1 from "../../Assets/gif/ART 2.gif";
+import g2 from "../../Assets/gif/ART 3 (2).gif";
+import g3 from "../../Assets/gif/Untitled design (1).gif";
 import arrow from "../../Assets/Group 1.png";
 // ContractCard component
 const ContractCard = ({
@@ -131,7 +134,13 @@ function Defi() {
             {artdisplay ? "" : ""}
           </p>
         </div>
-        {artdisplay && <div>Art collection here</div>}
+        {artdisplay && (
+          <div className="art-collection">
+            <img src={g1} alt="none" />
+            <img src={g2} alt="none" />
+            <img src={g3} alt="none" />
+          </div>
+        )}
       </div>
     </div>
   );

@@ -22,7 +22,9 @@ function Navbar() {
           <Link to="/explore">
             <button>Explore</button>
           </Link>
-          <button>Feedpage</button>
+          <Link to="/feed">
+            <button>Feedpage</button>
+          </Link>
           <ConnectButton />
         </div>
       </div>

@@ -3,6 +3,9 @@ import "../../Styles/Dao.css";
 import i1 from "../../Assets/poaps/p1.jpg";
 import i2 from "../../Assets/poaps/p2.jpg";
 import arrow from "../../Assets/Group 1.png";
+import nft1 from "../../Assets/nft/nft5.png";
+import nft2 from "../../Assets/nft/nft2.png";
+import nft3 from "../../Assets/nft/nft4.png";
 // import i3 from "../../Assets/poaps/p3.jpg";
 import i4 from "../../Assets/poaps/p4.png";
 
@@ -144,7 +147,7 @@ function Daos() {
             <div className="poaps">
               <h5>NFTs</h5>
               <div className="and-nft">
-                {[i1, i2, i4].map((image, index) => (
+                {[nft1, nft2, nft3].map((image, index) => (
                   <img
                     className="nft-images"
                     key={index}

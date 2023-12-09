@@ -88,5 +88,15 @@ th {
 
 #color-orange {
   color: #fd7725;
-  margin-top: 50px;
+  margin-top: 70px;
+}
+
+.art-collection {
+  display: flex;
+}
+
+.art-collection img {
+  margin: 15px;
+  width: 300px;
+  height: auto;
 }

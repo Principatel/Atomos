@@ -53,7 +53,7 @@
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .daos-card-here-head {
-  width: 350px;
+  width: 400px;
   font-size: 15px;
   text-align: center;
   border-radius: 10px 10px 0px 0px;
@@ -154,8 +154,8 @@
   height: auto;
 }
 .poaps-and-nft img {
+  width: 130px;
   cursor: pointer;
-  max-width: 132px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   margin: 4px 8px;
@@ -202,6 +202,7 @@
 }
 
 .mirror-card-here {
+  margin-top: 40px;
   display: flex;
   justify-content: space-evenly;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../Styles/Defi.css";
+import arrow from "../../Assets/Group 1.png";
 // ContractCard component
 const ContractCard = ({
   ethereumAddress,
@@ -22,9 +23,14 @@ const ContractCard = ({
 
 function Defi() {
   const [defivisible, setdefivisible] = useState(false);
+  const [artdisplay, setartdisplay] = useState(false);
 
   const toggledefi = () => {
     setdefivisible(!defivisible);
+  };
+
+  const toggleart = () => {
+    setartdisplay(!artdisplay);
   };
 
   const transactions = [
@@ -46,11 +52,10 @@ function Defi() {
     // Add more transactions as needed
   ];
 
-  // Dummy contract data
   const contracts = [
     {
       id: 1,
-      ethereumAddress: "0x123abc",
+      ethereumAddress: "0x123...abc",
       deployedChainName: "Ethereum",
       date: "2023-01-01",
       timeStamp: 1234567890,
@@ -58,15 +63,15 @@ function Defi() {
     },
     {
       id: 2,
-      ethereumAddress: "0x456def",
-      deployedChainName: "Binance Smart Chain",
+      ethereumAddress: "0x456...def",
+      deployedChainName: "BTTC",
       date: "2023-02-15",
       timeStamp: 1234567900,
       numberOfTransactions: 8,
     },
     {
       id: 3,
-      ethereumAddress: "0x789ghi",
+      ethereumAddress: "0x789...gf5",
       deployedChainName: "Polygon",
       date: "2023-03-22",
       timeStamp: 1234567910,
@@ -80,11 +85,14 @@ function Defi() {
     <div>
       <div className="dao-div">
         <div onClick={toggledefi} style={{ cursor: "pointer" }}>
-          <h2>Defi Activity {defivisible ? "" : ""}</h2>
+          <p className="defi-heading">
+            Defi Activity <img id="arrorr" src={arrow} alt="none" />{" "}
+            {defivisible ? "" : ""}
+          </p>
         </div>
         {defivisible && (
           <div>
-            <h3>Defi Transactions</h3>
+            <p>Defi Transactions</p>
             <div className="defi-transaction-container">
               <table>
                 <thead>
@@ -117,6 +125,13 @@ function Defi() {
             </div>
           </div>
         )}
+        <div onClick={toggledefi} style={{ cursor: "pointer" }}>
+          <p className="defi-heading" id="color-orange">
+            Art Collection <img id="arrorr" src={arrow} alt="none" />{" "}
+            {defivisible ? "" : ""}
+          </p>
+        </div>
+        {defivisible && <div>Art collection here</div>}
       </div>
     </div>
   );

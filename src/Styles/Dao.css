@@ -1,16 +1,29 @@
 .dao-div-nft {
+  /* display: flex; */
+  /* justify-content: space-between; */
   color: #9a9fff;
-
   font-family: Poppins;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+.dao-div-p img {
+  height: auto;
+  width: 30px;
+}
+
+#arrorr {
+  height: auto;
+  width: 30px;
+}
+
 .dao-div-p {
+  /* display: flex; */
+  /* justify-content: space-between; */
   color: #fd7725;
   font-family: Poppins;
-  font-size: 64px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -231,7 +244,8 @@
 }
 
 .warpcast-card h3 {
-  background-color: #cbcbcb59;
+  background-color: #323ff9;
+  text-align: center;
   padding: 14px;
   margin-top: initial;
   border-radius: 10px 10px 0px 0px;
@@ -243,9 +257,14 @@
   padding: 5px;
 }
 .warpcast-card button {
+  border-radius: 8px;
+  background: rgba(242, 240, 236, 0.92);
   margin: 8px;
   border-radius: 4px;
-  padding: 5px;
+  padding: 5px 10px;
+  color: black;
+  border-radius: 5px;
+
   /* border: none; */
   font-size: 15px;
 }
@@ -253,7 +272,7 @@
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   margin: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.227);
+  border: 1px solid rgba(240, 234, 244, 0.651);
   border-radius: 10px;
   padding: 0px;
 }
@@ -291,6 +310,11 @@
   background: rgba(255, 255, 255, 0.54);
 }
 .button-mirror-publish {
+  display: flex;
+  justify-content: center;
+}
+
+.farcast-view-more {
   display: flex;
   justify-content: center;
 }

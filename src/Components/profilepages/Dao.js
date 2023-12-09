@@ -125,10 +125,10 @@ function Daos() {
       </div>
       <div className="dao-div-nft">
         <div onClick={togglepoap} style={{ cursor: "pointer" }}>
-          <h2>
+          <p>
             Proof of Participation <img src={arrow} alt="none" />{" "}
             {ispoapvisible ? "" : ""}
-          </h2>{" "}
+          </p>{" "}
         </div>
         {ispoapvisible && (
           <div>

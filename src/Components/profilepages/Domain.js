@@ -22,17 +22,10 @@ function Domain() {
   const warpcastCards = [
     {
       id: 1,
-      title: "Warpcast 1",
+      title: "John Doe",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.Maecenas aliquet efficitur est, vel feugiat lacus elementum nec. Nullam a mi et justo feugiat condimentum. Curabitur ac dolor quam. Sed eu libero arcu. In hac habitasse platea dictumst. Fusce eu urna quis dolor efficitur pharetra. Vestibulum in arcu sit amet elit consectetur auctor in nec nisl. Curabitur nec aliquam libero. Proin tristique sem ac est ultricies, a tincidunt metus aliquet. Integer eu nulla in nisl condimentum euismod.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed tincidunt, libero id imperdiet interdum, justo lectus luctus purus, a iaculis arcu neque in ligula. Quisque dictum ex vitae risus faucibus, non vehicula nisi volutpat",
+        "I'm Oliver Tan, and I'm passionate about social justice. I'm currently working as an assistant for Martin Law.",
     },
-    {
-      id: 2,
-      title: "Warpcast 2",
-      description:
-        "Maecenas aliquet efficitur est, vel feugiat lacus elementum nec.Maecenas aliquet efficitur est, vel feugiat lacus elementum nec. Nullam a mi et justo feugiat condimentum. Curabitur ac dolor quam. Sed eu libero arcu. In hac habitasse platea dictumst. Fusce eu urna quis dolor efficitur pharetra. Vestibulum in arcu sit amet elit consectetur auctor in nec nisl. Curabitur nec aliquam libero. Proin tristique sem ac est ultricies, a tincidunt metus aliquet. Integer eu nulla in nisl condimentum euismod.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed tincidunt, libero id imperdiet interdum, justo lectus luctus purus, a iaculis arcu neque in ligula. Quisque dictum ex vitae risus faucibus, non vehicula nisi volutpat",
-    },
-    // Add more Warpcast cards as needed
   ];
 
   // Example data for Mirror Mint cards
@@ -50,21 +43,21 @@ function Domain() {
       title: "Future of Cryptocurrency",
       description:
         "Adjust the array and the structure inside the map function according to your specific requirements.",
-      buttonLabel: "Collected - 12/03/2023",
+      buttonLabel: "Created - 12/03/2023",
     },
     {
       id: 1,
       title: "intoducing Mode",
       description:
         "Adjust the array and the structure inside the map function according to your specific requirements.",
-      buttonLabel: "Collected - 01/12/2023",
+      buttonLabel: "Created - 01/12/2023",
     },
     {
       id: 2,
       title: "Blockchain Analysis",
       description:
         "Adjust the array and the structure inside the map function according to your specific requirements.",
-      buttonLabel: "Collected - 09/01/2023",
+      buttonLabel: "Created - 09/01/2023",
     },
   ];
 
@@ -76,10 +69,10 @@ function Domain() {
           onClick={toggledomain}
           style={{ cursor: "pointer" }}
         >
-          <hp>
+          <p>
             Owned Domains <img src={arrow} alt="none" />{" "}
             {domainvisible ? "" : ""}
-          </hp>
+          </p>
         </div>
         {domainvisible && (
           <div className="domain-card-here">
@@ -95,9 +88,10 @@ function Domain() {
           onClick={togglemirror}
           style={{ cursor: "pointer" }}
         >
-          <h2>
-            Mirror <img src={arrow} alt="none" /> {ismirrorvisible ? "" : ""}
-          </h2>
+          <p>
+            Mirror <img id="arrorr" src={arrow} alt="none" />{" "}
+            {ismirrorvisible ? "" : ""}
+          </p>
         </div>
         {ismirrorvisible && (
           <div>
@@ -119,8 +113,15 @@ function Domain() {
         )}
       </div>
       <div className="dao-div">
-        <div onClick={togglewarpcast} style={{ cursor: "pointer" }}>
-          <h2>Warpcast {iswarpcastvisible ? "" : ""}</h2>
+        <div
+          className="dao-div-p"
+          onClick={togglewarpcast}
+          style={{ cursor: "pointer" }}
+        >
+          <p>
+            Farcaster <img src={arrow} alt="none" />{" "}
+            {iswarpcastvisible ? "" : ""}
+          </p>
         </div>
         {iswarpcastvisible && (
           <div>
@@ -129,7 +130,11 @@ function Domain() {
                 <div key={card.id} className="warpcast-card">
                   <h3>{card.title}</h3>
                   <p>{card.description}</p>
-                  <button>View More</button>
+                  <p>Followers: 45</p>
+                  <p> Following: 20 </p>
+                  <div className="farcast-view-more">
+                    <button>View More</button>
+                  </div>
                 </div>
               ))}
             </div>

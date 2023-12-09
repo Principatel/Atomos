@@ -67,11 +67,20 @@ th {
   justify-content: center;
 }
 
+#font-size {
+  font-size: 30px;
+}
+
+#padding-purple {
+  padding: 10px;
+  color: #9a9fff;
+}
 .defi-heading {
   color: #9a9fff;
   margin-top: 10px;
+  margin-bottom: 30px;
   font-family: Poppins;
-  font-size: 40px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -79,4 +88,5 @@ th {
 
 #color-orange {
   color: #fd7725;
+  margin-top: 50px;
 }

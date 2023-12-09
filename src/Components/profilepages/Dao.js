@@ -205,7 +205,7 @@ function Daos() {
           </div>
         )}
       </div>
-      <div className="dao-div-nft">
+      <div className="dao-div-p" id="padding-purple">
         <div onClick={togglepoap} style={{ cursor: "pointer" }}>
           <p>
             Proof of Participation <img id="arrorr" src={arrow} alt="none" />{" "}

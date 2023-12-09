@@ -175,7 +175,7 @@ function Domain() {
         {ismirrorvisible && (
           <div>
             <div className="mirror-publish">
-              <h3 className="mirror-publish-head">Mirror Publish</h3>
+              {/* <h3 className="mirror-publish-head">Mirror Publish</h3> */}
               <div className="mirror-card-here">
               {records.map((record, index) => (
                   <div key={index} className="publish-mirror-card">

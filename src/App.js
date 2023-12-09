@@ -7,6 +7,7 @@ import { mainnet, polygon, optimism, arbitrum, base, zora } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import Profile from "./Components/profilepages/Profile";
+import Dao from "./Components/profilepages/Dao";
 
 const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, base, zora],
@@ -32,6 +33,7 @@ function App() {
         <RainbowKitProvider chains={chains}>
           <Navbar />
           <Profile />
+          <Dao />
         </RainbowKitProvider>
       </WagmiConfig>
     </div>

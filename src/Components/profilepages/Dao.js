@@ -1,7 +1,134 @@
-import React from "react";
+import React, { useState } from "react";
+import "../../Styles/Dao.css";
+import i1 from "../../Assets/poaps/p1.jpg";
+import i2 from "../../Assets/poaps/p2.jpg";
+// import i3 from "../../Assets/poaps/p3.jpg";
+import i4 from "../../Assets/poaps/p4.png";
 
-function Dao() {
-  return <div>dao</div>;
+const DaosCardContainer = () => {
+  const cardsData = [
+    {
+      title: "ProtocolX",
+      votingPower: 120,
+      votingPercentage: 65,
+      receivedDelegation: 600,
+      proposalsCreated: 8,
+      proposalsVoted: 18,
+    },
+    {
+      title: "DecentralizeCo",
+      votingPower: 180,
+      votingPercentage: 90,
+      receivedDelegation: 800,
+      proposalsCreated: 12,
+      proposalsVoted: 30,
+    },
+    {
+      title: "BlockchainSolutions",
+      votingPower: 80,
+      votingPercentage: 50,
+      receivedDelegation: 400,
+      proposalsCreated: 5,
+      proposalsVoted: 15,
+    },
+    {
+      title: "CryptoInnovators",
+      votingPower: 200,
+      votingPercentage: 85,
+      receivedDelegation: 1000,
+      proposalsCreated: 20,
+      proposalsVoted: 35,
+    },
+    {
+      title: "Web3Creators",
+      votingPower: 130,
+      votingPercentage: 70,
+      receivedDelegation: 550,
+      proposalsCreated: 9,
+      proposalsVoted: 22,
+    },
+    {
+      title: "SmartContractors",
+      votingPower: 160,
+      votingPercentage: 75,
+      receivedDelegation: 750,
+      proposalsCreated: 14,
+      proposalsVoted: 28,
+    },
+  ];
+
+  return (
+    <div className="dao-card-container">
+      {cardsData.map((card, index) => (
+        <DaosCard key={index} {...card} />
+      ))}
+    </div>
+  );
+};
+
+const DaosCard = ({
+  title,
+  votingPower,
+  votingPercentage,
+  receivedDelegation,
+  proposalsCreated,
+  proposalsVoted,
+}) => {
+  return (
+    <div className="daos-card-here">
+      <h2>{title}</h2>
+      <div>
+        <p>Voting Power: {votingPower}</p>
+        <p>Voting Percentage: {votingPercentage}%</p>
+        <p>Received Delegation: {receivedDelegation}</p>
+        <p>Proposals Created: {proposalsCreated}</p>
+        <p>Proposals Voted: {proposalsVoted}</p>
+      </div>
+    </div>
+  );
+};
+
+function Daos() {
+  const [isDaoVisible, setIsDaoVisible] = useState(false);
+  const [ispoapvisible, setispoapvisible] = useState(false);
+
+  const toggleDao = () => {
+    setIsDaoVisible(!isDaoVisible);
+  };
+
+  const togglepoap = () => {
+    setispoapvisible(!ispoapvisible);
+  };
+
+  return (
+    <div>
+      <div className="dao-div">
+        <div onClick={toggleDao} style={{ cursor: "pointer" }}>
+          <h2>DAOs Participation & Power {isDaoVisible ? "" : ""}</h2>
+        </div>
+        {isDaoVisible && (
+          <div>
+            <div className="scrollable-container">
+              {/* Integrated DaosCardContainer here */}
+              <DaosCardContainer />
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="dao-div">
+        <div onClick={togglepoap} style={{ cursor: "pointer" }}>
+          <h2>Proof of Participation {ispoapvisible ? "" : ""}</h2>{" "}
+        </div>
+        {ispoapvisible && (
+          <div className="poaps-and-nft">
+            {[i1, i2, i4].map((image, index) => (
+              <img key={index} src={image} alt={`poap-${index}`} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
 
-export default Dao;
+export default Daos;

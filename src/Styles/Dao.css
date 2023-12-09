@@ -1,0 +1,174 @@
+.dao-div {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  margin: 30px 0px;
+  padding: 15px;
+  border: 1px solid #00000000;
+}
+
+.dao-card {
+  cursor: pointer;
+
+  width: max-content;
+  display: flex;
+  align-items: stretch;
+}
+
+.daos-card-here:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.daos-card-here {
+  text-align: justify;
+  border-radius: 10px;
+  margin: 8px;
+  padding: 15px;
+  box-shadow: rgb(0 0 0 / 57%) 0px 1px 4px;
+}
+
+.dao-card-container {
+  width: max-content;
+  display: flex;
+  align-items: stretch;
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-x: auto;
+}
+
+.container-mirror-div {
+  overflow-x: scroll;
+}
+
+.scrollable-container {
+  overflow-x: auto;
+}
+
+.dao-card-container::-webkit-scrollbar {
+  width: 1px; /* Adjust the width of the scrollbar */
+}
+
+.dao-card-container::-webkit-scrollbar-thumb {
+  background-color: #88888834; /* Adjust the color of the scrollbar thumb */
+  border-radius: 6px; /* Adjust the border radius of the scrollbar thumb */
+}
+
+.dao-card-container::-webkit-scrollbar-track {
+  background-color: #f1f1f128; /* Adjust the color of the scrollbar track */
+}
+
+.poaps-and-nft {
+  display: flex;
+  overflow-x: auto;
+}
+
+.poaps-and-nft img:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  scale: 1.04;
+}
+.poaps-and-nft img {
+  cursor: pointer;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  margin: 4px 8px;
+  border-radius: 250px;
+  max-width: 100%;
+  height: auto;
+}
+
+.domain-card {
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.146);
+  border-radius: 5px;
+  padding: 18px;
+  font-size: 27px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.domain-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.domain-card-here {
+  margin: 12px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mirror-card-here {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mirror-card img {
+  border-radius: 10px 10px 0px 0px;
+}
+.mirror-card:hover {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.mirror-card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  margin: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.155);
+}
+
+.publish-mirror-card:hover {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.publish-mirror-card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  margin: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.155);
+}
+
+.publish-mirror-card h3 {
+  background-color: #cbcbcb59;
+  padding: 14px;
+  margin-top: initial;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #0000003d;
+}
+
+.mirror-publish {
+  overflow-x: scroll;
+}
+
+.warpcast-card h3 {
+  background-color: #cbcbcb59;
+  padding: 14px;
+  margin-top: initial;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #0000003d;
+}
+.warpcast-card p {
+  text-align: justify;
+  margin: 5px;
+  padding: 5px;
+}
+.warpcast-card button {
+  margin: 8px;
+  border-radius: 4px;
+  padding: 5px;
+  /* border: none; */
+  font-size: 15px;
+}
+.warpcast-card {
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  margin: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.227);
+  border-radius: 10px;
+  padding: 0px;
+}
+
+.warpcast-card-here {
+  display: flex;
+}

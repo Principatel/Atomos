@@ -1,12 +1,14 @@
-import React, { useState } from "react";
-import m1 from "../../Assets/poaps/p1.jpg";
-
+import React, { useState, useEffect } from "react";
+// import m1 from "../../Assets/poaps/p1.jpg";
 import arrow from "../../Assets/Group 1.png";
+import { useQuery } from "@airstack/airstack-react";
+import "../../Styles/Dao.css";
 
 function Domain() {
   const [domainvisible, setdomainvisible] = useState(false);
   const [ismirrorvisible, setismirrorvisible] = useState(false);
   const [iswarpcastvisible, setwarpcastvisible] = useState(false);
+  const [records, setRecords] = useState([]);
 
   const toggledomain = () => {
     setdomainvisible(!domainvisible);
@@ -20,47 +22,125 @@ function Domain() {
     setwarpcastvisible(!iswarpcastvisible);
   };
 
-  const warpcastCards = [
-    {
-      id: 1,
-      title: "John Doe",
-      description:
-        "I'm Oliver Tan, and I'm passionate about social justice. I'm currently working as an assistant for Martin Law.",
-    },
-  ];
+  // const warpcastCards = [
+  //   {
+  //     id: 1,
+  //     title: "John Doe",
+  //     description:
+  //       "I'm Oliver Tan, and I'm passionate about social justice. I'm currently working as an assistant for Martin Law.",
+  //   },
+  // ];
 
-  // Example data for Mirror Mint cards
-  const mirrorCards = [
-    { id: 1, title: "Mirror Mint 1", imageSrc: m1 },
-    { id: 2, title: "Mirror Mint 2", imageSrc: m1 },
-    { id: 1, title: "Mirror Mint 1", imageSrc: m1 },
-    { id: 2, title: "Mirror Mint 2", imageSrc: m1 },
-    // Add more mirror cards as needed
-  ];
+  // // Example data for Mirror Mint cards
+  // const mirrorCards = [
+  //   { id: 1, title: "Mirror Mint 1", imageSrc: m1 },
+  //   { id: 2, title: "Mirror Mint 2", imageSrc: m1 },
+  //   { id: 1, title: "Mirror Mint 1", imageSrc: m1 },
+  //   { id: 2, title: "Mirror Mint 2", imageSrc: m1 },
+  //   // Add more mirror cards as needed
+  // ];
 
-  const mirrorPublishCards = [
-    {
-      id: 1,
-      title: "Future of Cryptocurrency",
-      description:
-        "Adjust the array and the structure inside the map function according to your specific requirements.",
-      buttonLabel: "Created - 12/03/2023",
-    },
-    {
-      id: 1,
-      title: "intoducing Mode",
-      description:
-        "Adjust the array and the structure inside the map function according to your specific requirements.",
-      buttonLabel: "Created - 01/12/2023",
-    },
-    {
-      id: 2,
-      title: "Blockchain Analysis",
-      description:
-        "Adjust the array and the structure inside the map function according to your specific requirements.",
-      buttonLabel: "Created - 09/01/2023",
-    },
-  ];
+  // const mirrorPublishCards = [
+  //   {
+  //     id: 1,
+  //     title: "Future of Cryptocurrency",
+  //     description:
+  //       "Adjust the array and the structure inside the map function according to your specific requirements.",
+  //     buttonLabel: "Created - 12/03/2023",
+  //   },
+  //   {
+  //     id: 1,
+  //     title: "intoducing Mode",
+  //     description:
+  //       "Adjust the array and the structure inside the map function according to your specific requirements.",
+  //     buttonLabel: "Created - 01/12/2023",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Blockchain Analysis",
+  //     description:
+  //       "Adjust the array and the structure inside the map function according to your specific requirements.",
+  //     buttonLabel: "Created - 09/01/2023",
+  //   },
+  // ];
+
+  const MyQuery = `
+    query FarCasterQuery {
+      Socials(
+        input: {filter: {identity: {_eq: "0xF4B0556B9B6F53E00A1FDD2b0478Ce841991D8fA"}, dappName: {_eq: farcaster}}, blockchain: ethereum}
+      ) {
+        Social {
+          dappName
+          profileName
+          profileBio
+          profileDisplayName
+          profileImage
+          profileUrl
+          userAddress
+          userCreatedAtBlockTimestamp
+          userCreatedAtBlockNumber
+          userHomeURL
+          userRecoveryAddress
+          userAssociatedAddresses
+        }
+      }
+    }
+  `;
+
+  const {
+    data: warpData,
+    loading,
+    error,
+  } = useQuery(MyQuery, {}, { cache: false });
+  const [warpResult, setWarpResult] = useState(null);
+  console.log(warpData);
+
+  const query = `
+    query MyQuery {
+      Domains(input: {filter: {owner: {_eq: "0xF4B0556B9B6F53E00A1FDD2b0478Ce841991D8fA"}}, blockchain: ethereum}) {
+        Domain {
+          name
+        }
+      }
+    }
+  `;
+
+  const { data } = useQuery(query, {}, { cache: false });
+  const domainName = data?.Domains?.Domain[0]?.name;
+  console.log(data);
+
+  useEffect(() => {
+    const fetchMirrorData = async () => {
+      const apiKey = "Fumryst0yiG1NJLxDrt7K2mrXvZilIkM"; // Add your Dune API key to environment variables
+
+      const meta = {
+        "x-dune-api-key": apiKey,
+      };
+
+      try {
+        const response = await fetch(
+          `https://api.dune.com/api/v1/query/3255820/results?api_key=${apiKey}`,
+          {
+            method: "GET",
+            headers: new Headers(meta),
+          }
+        );
+        const body = await response.json();
+
+        // Make sure to adjust this part based on the actual response structure
+        const mirrorData = body?.result?.rows || [];
+        console.log(mirrorData);
+
+        setRecords(mirrorData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchMirrorData();
+  }, []);
+
+  const warpcastCards = warpData?.Socials?.Social || [];
 
   return (
     <div>
@@ -77,9 +157,11 @@ function Domain() {
         </div>
         {domainvisible && (
           <div className="domain-card-here">
-            <div className="domain-card">ken.eth</div>
-            <div className="domain-card">Samth.eth</div>
-            <div className="domain-card">Rohin.mode</div>
+            {domainName ? (
+              <div className="domain-card">{domainName}</div>
+            ) : (
+              <div>This address does not hold any domains.</div>
+            )}
           </div>
         )}
       </div>
@@ -99,13 +181,19 @@ function Domain() {
             <div className="mirror-publish">
               {/* <h3 className="mirror-publish-head">Mirror Publish</h3> */}
               <div className="mirror-card-here">
-                {mirrorPublishCards.map((card) => (
-                  <div key={card.id} className="publish-mirror-card">
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
-                    <div className="button-mirror-publish">
-                      <button>{card.buttonLabel}</button>
+                {records.map((record, index) => (
+                  <div key={index} className="publish-mirror-card">
+                    <h3>{record.title}</h3>
+                    <div>
+                      <div>{record.symbol}</div>
+                      <br></br>
                     </div>
+                    <div className="mirror-description">
+                      {record.description}
+                    </div>
+                    <br></br>
+                    {/* <p>{record.description}</p> */}
+                    <div>{record.created_block_time}</div>
                   </div>
                 ))}
               </div>
@@ -127,15 +215,17 @@ function Domain() {
         {iswarpcastvisible && (
           <div>
             <div className="warpcast-card-here">
-              {warpcastCards.map((card) => (
-                <div key={card.id} className="warpcast-card">
-                  <h3>{card.title}</h3>
-                  <p>{card.description}</p>
-                  <p>Followers: 45</p>
-                  <p> Following: 20 </p>
-                  <div className="farcast-view-more">
-                    <button>View More</button>
-                  </div>
+              {warpcastCards.map((card, index) => (
+                <div key={index} className="warpcast-card">
+                  <h3>{card.profileName}</h3>
+                  <p>{card.profileBio}</p>
+                  <img
+                    className="farcaster-image"
+                    src={card.profileImage}
+                    alt={card.profileName}
+                  />
+                  <p>{card.profileUrl}</p>
+                  <button>View More</button>
                 </div>
               ))}
             </div>

@@ -1,0 +1,45 @@
+.explore-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+  transition: transform 0.3s ease-in-out;
+  /* Hover effect */
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+.wallet-address {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.description {
+  margin-bottom: 16px;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  /* Hover effect */
+  &:hover {
+    background-color: #45a049;
+  }
+}
+.explore-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display three cards per row */
+  grid-gap: 16px;
+}

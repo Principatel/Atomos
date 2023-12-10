@@ -9,9 +9,11 @@ import { publicProvider } from "wagmi/providers/public";
 import Profile from "./Components/profilepages/Profile";
 import Dao from "./Components/profilepages/Dao";
 import Ecommerce from "./Components/Ecommerce";
-import Explore from "./Components/Explore";
-import Myprofile from "./Components/Myprofile";
+// import Explore from "./Components/Explore";
 import Feedpage from "./Components/Feedpage";
+import Myprofile from "./Components/Myprofile";
+import { AirstackProvider } from "@airstack/airstack-react";
+import ExplorePage from "./Components/Explore/ExplorePage";
 
 const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, base, zora],
@@ -37,16 +39,18 @@ function App() {
         <WagmiConfig config={wagmiConfig}>
           <RainbowKitProvider chains={chains}>
             <Navbar />
-            {/* <Ecommerce /> */}
-            {/* <Explore /> */}
-            {/* <Myprofile /> */}
-            <Routes>
-              <Route path="/e-commmerce" element={<Ecommerce />} />
-              <Route path="/myprofile" element={<Myprofile />} />
-              <Route path="/explore" element={<Explore />} />
-              <Route path="/feed" element={<Feedpage />} />
-              {/* <Route path="/dao" element={<Dao />} /> */}
-            </Routes>
+            <AirstackProvider apiKey={"1bd6b585dc4c049148638d1a196d1dc44"}>
+              {/* <Ecommerce /> */}
+              {/* <Explore /> */}
+              {/* <Myprofile /> */}
+              <Routes>
+                <Route path="/e-commmerce" element={<Ecommerce />} />
+                <Route path="/myprofile" element={<Myprofile />} />
+                <Route path="/explore" element={<ExplorePage />} />
+                <Route path="/feed" element={<Feedpage />} />
+                {/* <Route path="/dao" element={<Dao />} /> */}
+              </Routes>
+            </AirstackProvider>
           </RainbowKitProvider>
         </WagmiConfig>
       </Router>

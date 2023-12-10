@@ -16,9 +16,9 @@ function Navbar() {
           <Link to="/myprofile">
             <button>Profile</button>
           </Link>
-          <Link to="/e-commmerce">
+          {/* <Link to="/e-commmerce">
             <button>E-commerce</button>
-          </Link>
+          </Link> */}
           <Link to="/explore">
             <button>Explore</button>
           </Link>
